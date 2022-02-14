@@ -1,0 +1,167 @@
+.header {
+  background-color: $background-header;
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 25px;
+  letter-spacing: 0.15em;
+  color: $text-white;
+}
+
+.header__input {
+  padding: 15px;
+  padding-left: 48px;
+  padding-right: 40px;
+  border-radius: 8px;
+  background-color: $background-input;
+  width: 100%;
+  order: 4;
+  margin-top: 9px;
+  position: relative;
+  color: $text-white;
+  background-image: url(../../image/Location.svg), url(../../image/Search.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 11px, 95% 10px;
+}
+
+.header__input::placeholder {
+  color: $text-grey;
+}
+
+.header__phone-link {
+  display: none;
+}
+
+.header__link-basket {
+  background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+  border-radius: 10px;
+  width: 62px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: $text-white;
+  padding-top: 5px;
+  padding-bottom: 9px;
+  padding-right: 8px;
+  padding-left: 8px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.header__p-link {
+  border-top: 1px solid rgba($text-white, 0.3);
+}
+
+.header__img {
+  padding-bottom: 3px;
+}
+
+.header__p-menu {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $text-white;
+}
+
+.header__burger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: $background-green;
+  margin-bottom: 4px;
+}
+
+.header__button {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding-left: 6%;
+    padding-right: 5%;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  .header__mobile-menu {
+    display: none;
+  }
+
+  .header__input {
+    order: 0;
+    width: 38%;
+    margin-top: 0;
+    margin-right: 2%;
+  }
+
+  .header__phone-link {
+    display: flex;
+    flex-direction: column;
+    color: $text-white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .header__phone-link::before {
+    content: url(../../image/Calling.svg);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    position: absolute;
+    top: 2px; 
+    left: -38px;
+  }
+
+  .header__span {
+    color: $text-grey;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .header__link-basket {
+    flex-direction: row;
+    justify-content: center;
+    width: 149px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 13%;
+  }
+
+  .header__img {
+    margin-left: 12px;
+  }
+
+  .header__p-link {
+    border-top: none;
+    border-right: 1px solid $text-grey;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
